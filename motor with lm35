@@ -1,0 +1,19 @@
+int motor = 13 ;
+int lm35 = A0 ;
+float x,y ;
+void setup() {
+  // put your setup code here, to run once:
+  pinMode ( motor , OUTPUT ) ;
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  x = analogRead ( lm35 ) ;
+  y = x * 0.5 / 1023 ;
+  y = y * 100 ;
+  if ( y > 26 )
+  digitalWrite ( motor , HIGH ) ;
+  else 
+  { digitalWrite ( motor , LOW ); }
+  delay ( 1000 ) ;
+}
