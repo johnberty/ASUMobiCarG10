@@ -1,0 +1,20 @@
+/*This project is to control a LED usong an Arduino
+ * this is a simple project
+ */
+#define ledpin 8
+void setup() {
+  //to set the pin 8 to give an output.
+pinMode(ledpin,OUTPUT);
+}
+
+void loop() {
+ /*here the led will turn on and then 
+  * wait for a sec and afterthat turn off
+  */
+  //turn the led on
+digitalWrite(ledpin, HIGH);
+//wait for 1 sec (here the fn take the parameters in millisecond)
+delay(1000);
+digitalWrite(ledpin, LOW);
+delay(1000);
+}
