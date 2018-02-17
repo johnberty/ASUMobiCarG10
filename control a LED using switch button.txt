@@ -1,0 +1,18 @@
+/*This is a simple project to control 
+ * a LED using switch button
+ */
+ #define LEDPIN 8
+
+ #define BUTTONPIN 7
+
+ void setup(){
+  pinMode (8, OUTPUT);
+  pinMode (7, INPUT);
+  }
+
+  void loop(){
+    if (digitalRead(BUTTONPIN==LOW))
+    digitalWrite (LEDPIN, HIGH);
+    else
+    digitalWrite (LEDPIN, LOW);
+    }
