@@ -1,0 +1,15 @@
+const int trig=13;
+const int echo=12;
+float t,d;
+#include <LiquidCrystal.h>
+#include <NewPing.h>
+LiquidCrystal lcd(5,4,3,2,1,0);
+NewPing ultra (trig,echo);
+void setup() {
+lcd.begin(16,2);
+}
+void loop() {
+float d=ultra.ping_cm();
+lcd.setCursor(0,0);
+lcd.print(String(d));
+}
