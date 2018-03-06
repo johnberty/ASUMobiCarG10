@@ -1,0 +1,21 @@
+#define motorpin 11
+
+void setup()
+{
+   pinMode(motorpin,output);
+   analogWrite(motorpin,0);
+   serial.begin(9600);
+   serial.printLn("Enter a number form 0 to 9");
+}
+void loop()
+{
+   if(serial.available())
+      {
+          char ch = serial.read();
+      }
+   if(ch>='0'&&ch<='9')
+      {
+          int speed='0';
+          analogWrite(motorpin,map(speed,0,9,0,255));
+      }
+} 
